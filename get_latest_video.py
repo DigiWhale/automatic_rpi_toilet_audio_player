@@ -1,4 +1,4 @@
-import pyyoutube
+from pyyoutube import Api
 import os
 from dotenv import load_dotenv
 
@@ -7,7 +7,6 @@ load_dotenv()
 api = Api(api_key=os.getenv("YOUTUBE_API_KEY"))
 
 def get_videos(channel_id):
-    api = pyyoutube.Api(api_key=API_KEY)
     channel_info = api.get_channel_info(channel_id=channel_id)
 
     playlist_id = channel_info.items[0].contentDetails.relatedPlaylists.uploads
@@ -32,6 +31,3 @@ def processor():
         for video in videos:
             f.write(video.to_json())
             f.write("\n")
-            
-if __name__ == "__main__":
-    processor()
