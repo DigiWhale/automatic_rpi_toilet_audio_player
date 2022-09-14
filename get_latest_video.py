@@ -7,7 +7,7 @@ load_dotenv()
 api = Api(api_key=os.getenv("YOUTUBE_API_KEY"))
 
 def get_videos(channel_id):
-    channel_info = api.get_channel_info(channel_id=channel_id)
+    channel_info = api.get_channel_info(for_username=channel_id)
 
     playlist_id = channel_info.items[0].contentDetails.relatedPlaylists.uploads
 
@@ -24,7 +24,7 @@ def get_videos(channel_id):
 
 
 def processor():
-    channel_id = "UC_x5XG1OV2P6uZZ5FSM9Ttw"
+    channel_id = "CNN"
     videos = get_videos(channel_id)
     print(videos)
 
