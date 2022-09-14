@@ -17,7 +17,7 @@ while True:
     pygame.mixer.music.load("/home/pi/latest.mp3")
     pygame.mixer.music.play()
     pygame.mixer.music.pause()
-    while True:
+    while pygame.mixer.music.get_busy() == True:
       if GPIO.input(switch):
         pygame.mixer.music.unpause()
       else:
