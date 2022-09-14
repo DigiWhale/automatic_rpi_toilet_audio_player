@@ -41,6 +41,7 @@ def processor():
     videos = get_videos(channel_id)
     # print(videos[0].snippet.publishedAt, videos[0].snippet.title, videos[0].id)
     audio_downloader.download([link + videos[0].id])
+    print("Downloaded latest video from " + link+videos[0].id)
 
 if __name__ == "__main__":
     processor()
