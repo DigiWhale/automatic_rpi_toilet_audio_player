@@ -26,9 +26,7 @@ def get_videos(channel_id):
 def processor():
     channel_id = "CNN"
     videos = get_videos(channel_id)
-    for video in videos:
-      # print(video.snippet.publishedAt, video.snippet.title, video.id)
-      print(video[0].snippet.publishedAt, video[0].snippet.title, video[0].id)
+    print(videos[0].snippet.publishedAt, videos[0].snippet.title)
 
     with open("videos.json", "w+") as f:
         for video in videos:
