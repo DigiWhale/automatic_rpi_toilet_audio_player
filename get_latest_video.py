@@ -1,4 +1,4 @@
-from pyyoutube import Api
+import pyyoutube
 import os
 from dotenv import load_dotenv
 
