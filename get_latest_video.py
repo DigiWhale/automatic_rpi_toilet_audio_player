@@ -27,8 +27,12 @@ def processor():
     channel_id = "CNN"
     videos = get_videos(channel_id)
     print(videos)
+    print("finished")
 
     with open("videos.json", "w+") as f:
         for video in videos:
             f.write(video.to_json())
             f.write("\n")
+
+if __name__ == "__main__":
+    processor()
