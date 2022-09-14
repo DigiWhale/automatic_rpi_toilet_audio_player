@@ -26,6 +26,7 @@ def get_videos(channel_id):
 def processor():
     channel_id = "UC_x5XG1OV2P6uZZ5FSM9Ttw"
     videos = get_videos(channel_id)
+    print(videos)
 
     with open("videos.json", "w+") as f:
         for video in videos:
