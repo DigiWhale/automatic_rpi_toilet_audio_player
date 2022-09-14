@@ -9,7 +9,7 @@ api = Api(api_key=os.getenv("YOUTUBE_API_KEY"))
 
 ydl_opts = {
     'format': 'bestaudio/best',
-    'outtmpl': '/home/pi/latest.mp3',
+    'outtmpl': '/home/pi/latest.%(ext)s',
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
