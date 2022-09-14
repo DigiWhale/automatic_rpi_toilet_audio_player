@@ -1,3 +1,9 @@
-from youtube_dl import YoutubeDL
+from pyyoutube import Api
+import os
+from dotenv import load_dotenv
 
-ydl_opts 
+load_dotenv()
+
+api = Api(api_key=os.getenv("YOUTUBE_API_KEY"))
+
+print(api)
