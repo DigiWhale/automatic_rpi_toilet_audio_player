@@ -2,6 +2,7 @@ import RPi.GPIO as GPIO
 import time
 import pygame
 import alsaaudio
+from get_latest_video import *
 
 # m = alsaaudio.Mixer()
 # current_volume = m.getvolume() # Get the current Volume
@@ -22,4 +23,8 @@ while True:
         pygame.mixer.music.unpause()
       else:
         pygame.mixer.music.pause()
+    try:
+      processor()
+    except:
+      pass
 
