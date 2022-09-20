@@ -15,7 +15,7 @@ GPIO.setup(switch, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 paused = False
 while True:
   if GPIO.input(switch):
-    processor()
+    # processor()
     pygame.mixer.init()
     pygame.mixer.music.load("/home/pi/latest_video.mp3")
     print("Loading latest video")
