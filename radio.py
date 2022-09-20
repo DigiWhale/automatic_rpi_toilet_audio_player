@@ -25,7 +25,12 @@ while True:
     while pygame.mixer.music.get_busy() == True:
       if GPIO.input(switch):
         pygame.mixer.music.unpause()
-        # print("Unpaused")
+        if paused:
+          print("Resuming")
+          paused = False
+        if not paused:
+          paused = True
+          print("Unpaused")
       else:
         pygame.mixer.music.pause()
         # print("Paused")
