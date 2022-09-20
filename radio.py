@@ -32,8 +32,7 @@ while True:
         pygame.mixer.music.pause()
         if not paused:
           paused = True
-          print("Unpaused")
-        # print("Paused")
+          print("Pausing")
     try:
       print("Getting new video")
       processor()
