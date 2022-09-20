@@ -37,7 +37,7 @@ def get_videos(channel_id):
 
 
 def processor():
-    channel_id = "CNN"
+    channel_id = "FOX"
     videos = get_videos(channel_id)
     # print(videos[0].snippet.publishedAt, videos[0].snippet.title, videos[0].id)
     audio_downloader.download([link + videos[0].id])
